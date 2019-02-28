@@ -1,0 +1,76 @@
+<script>
+    /*$(document).ready(function () {
+        $("#searchBtn").click(function (event) {
+            var search= $('#searchBar').val();
+             $.ajax({
+                dataType: 'text',
+                type: 'POST',
+                url: 'http://localhost:8080/searchit',
+                data: {
+                    data: search
+                },
+                success: function (newList) {
+                    console.log("requestSend");
+                },
+                error: function () {
+                    alert('some thing went wrong');
+                }
+            });
+        });
+    })*/
+</script>
+<div class="container">
+<form method="POST" action="/searchit">
+<input type="text" id="searchBar" name="search" />
+    <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+</form>
+    
+    <h1>Result:</h1>
+    {{data}}
+{{#each data}}
+    <div class="card">
+            <div class="user-info-btn modalBtn">
+                <button type="button" 
+                class=" btn-primary-outline glyphicon glyphicon-info-sign" 
+                data-toggle="modal"
+                data-target="#myModal-{{id}}"></button>
+            </div>
+            <tr class="info">
+                <td class="from to"><h3><strong>{{from}}</strong></h3></td>
+                <td class="time"><h4>{{createdAt}}</h4>  </td>
+            </tr>
+
+            </span>
+
+    </div>
+    
+    <div class="modal fade" id="myModal-{{id}}" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{from}}</h4>
+                </div>
+                 <tr class="modal-body">
+                     <p class="content">
+                        {{content}}
+                     </p>
+                 </tr>
+                 <hr />
+                <tr class="modal-footer">
+                    <div class="user-popup-links">
+                            
+                            <td class="dropDown-fields removeBtn"><a class=" glyphicon glyphicon-trash"
+                                    href="/inbox/remove/{{id}}"> remove</a>
+                            </td>
+                            <td class="dropDown-fields removeBtn"><a class=" glyphicon glyphicon-hand-right"
+                                    href="/inbox/archive/{{id}}">Archive</a>
+                            </td>
+                            
+                    </div>
+                </tr>
+            </div>
+        </div>
+    </div>
+
+{{/each}}

@@ -1,0 +1,47 @@
+
+<style>
+    
+</style>
+
+<div class="container">
+
+    <h1>Sent</h1>
+{{#each data}}
+
+
+    <div class="card">
+            <div class="user-info-btn">
+                <button type="button" 
+                class=" btn-primary-outline glyphicon glyphicon-info-sign" 
+                data-toggle="modal"
+                data-target="#myModal-{{to}}"></button>
+            </div>
+
+             <tr class="info">
+                <td class="from to"><h3><strong>{{to}}</strong></h3></td>
+                <td class="time"><h4>{{createdAt}}</h4>  </td>
+            </tr>
+    </div>
+    
+    <div class="modal fade" id="myModal-{{to}}" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{to}} {{content}}</h4>
+                </div>
+
+                <tr class="modal-footer">
+                    <div class="user-popup-links">
+                            
+                            <td class="dropDown-fields"><a class=" glyphicon glyphicon-trash modalRemove"
+                                    href="/inbox/remove/{{id}}"> remove</a>
+                            </td>
+                            
+                    </div>
+                </tr>
+            </div>
+        </div>
+    </div>
+
+{{/each}}

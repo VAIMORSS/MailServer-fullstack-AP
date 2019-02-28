@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Home</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background-color: rgba(188, 192, 196, 0.925);
+        }
+        .form-signin{
+            box-shadow:20px 16px 18px 0 rgba(85, 50, 50, 0.2); 
+            border-radius: 20px;
+            transition: 0.3s;
+            padding: 20px;
+            display: inline-box;
+            margin: 2%;
+            background-color: #fff;
+        }
+        .form-signin:hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .card{
+            margin:5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="card col-4-md col-4-lg col-4-xl">
+            <form class="form-signin"  method="POST">
+            
+                <div class="form-group">
+                    <label for="Username">Email</label>
+                <input id='usernameln' class="form-control " name='userNameLn' type='email'><br />
+                </div>
+                <div class="form-group">
+                    <label for="Password">Passsword</label>
+                <input id='passwordln' class="form-control" name='passwordLn' type='password'><br />
+                </div>
+                <div class="form-group">
+                <td><button class="btn btn-primary" formaction="logIn" type="submit">Sign In</button></td>
+                <td><button formaction="signUp" class="btn btn-secondary"type="submit">sign up</button></td>
+                </div>
+            </div>     
+    </form>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "client-sessions": "^0.8.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.1.0",
+    "mongoose": "^5.4.13",
+    "pg": "^7.6.1",
+    "sequelize": "^4.41.2"
+  }
+}
